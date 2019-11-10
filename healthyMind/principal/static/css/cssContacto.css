@@ -1,0 +1,97 @@
+body{
+    background:#f2f2f2;
+    font-family: 'Slabo 27px', serif;
+    font-size:10px;
+}
+
+
+
+
+
+
+
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario input[type="textarea"]:focus,
+.formulario input[type="number"]:focus,
+.formulario input[type="textarea"]:focus{
+    border-bottom: 2px solid;
+    color:red;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"]{
+    display:block;
+    width:100%;
+    margin-bottom:20px;
+    padding:15px 10px;
+    border:none;
+    border-bottom:1px solid;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus{
+    border-bottom: 2px solid;
+    color:red;
+}
+
+
+
+.formulario input[type="radio"]:checked + .label-radio
+{
+    background:#f9a03f;
+}
+
+.terminos
+{
+    text-align: center;
+    color:#424242;
+}
+
+
+.formulario .error
+{
+    display:none;
+    margin-top:30px;
+    border-radius: 3px;
+    background: #ce1818;
+    color: #fff;
+    padding: 15px 10px;
+    padding-left: 40px;
+}
+
+.formulario .btn
+{
+    width:100%;
+    text-align: center;
+    background : #246eb9;
+    border:none;
+    display:block;
+    padding:15px 10px;
+    cursor: pointer;
+    border-radius: 0px 0px 6px 6px;
+    font-family: 'Slabo 27px', serif;
+    font-size:18px;
+}
+
+.formulario .btn:hover{
+    background: #4357ad;
+}
+
+
+.margen
+{
+    margin-top: 500px;
+}
+
+.contenedor-Contacto
+{
+    width:100 vh;
+    background:url(../img/overlay.png),url(../img/2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
