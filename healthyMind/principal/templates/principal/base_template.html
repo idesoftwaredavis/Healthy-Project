@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+    <title>Healthy-Mind</title>
+</head>
+
+<body class="background">
+    <!--Seccion Header/Navbar-->
+    <div class="container">
+        <div class="row ">
+            <div class="col ">
+                <nav>
+                    <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                        <!--Titulo/Icon-->
+                        <img src="{% static 'main/img/logo.png' %}" alt="Logo Healthy-Mind" width="30" height="30" class="logo">
+                        <a href="{% url 'index' %}" class="navbar-brand text-muted">Healthy-Mind</a>
+                        <!--Boton-Collapse (Aparicion de Icono menu para dispositivos Movil)-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menu de Navegacion">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <!--Enlace ha utilizar-->
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="ul-navbar navbar-nav justify-content-center">
+                                <li class="navbar-item">
+                                    <a href="#" class="header-items nav-link lead proximamente">Quienes Somos</a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a href="E-Books/ebooks.html" class="header-items nav-link lead">E-Books</a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a href="#" class="header-items nav-link lead dropdown-toggle" id="submenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulos</a>
+                                    <div class="dropdown">
+                                        <div class="dropdown-menu">
+                                            <a href="Articulos/article1.html" class="Articulos-Submenu dropdown-item" id="actitud">Actitud Positiva</a>
+                                            <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
+                                            <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
+                                            <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="navbar-item">
+                                    <a href="#" class="header-items nav-link lead">Charlas</a>
+                                </li>
+                                <li class="navbar-item">
+                                    <a href="{% url 'contacto' %}" class="header-items nav-link lead">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--BACKGROUND-->
+    <div class="row">
+        <header class="main-header">
+            <div class="col col-md-6 offset-md-3 info text-center">
+                <h1 class="display-4 text-center">HEALTHY-MIND</h1>
+                <p class="p-header text-justify lead text-center text-white">Tú eres el cambio que quieres ver en el mundo. Si quieres cambiar el mundo, cámbiate a ti mismo.</p>
+            </div>
+        </header>
+    </div>
+    <!--SECTIONS-->
+        {% block content %}{% endblock %}
+    <!--FIN SECTIONS -->
+    <div class="container">
+        <!--SECCION FOOTER-->
+        <div class="row border-top py-2">
+            <div class="col">
+                <footer class="bg-dark mt-20 footer">
+                    <figure>
+                        <img src="{% static 'main/img/logo.png' %}" width="50" alt="" class="img-fluid rounded mx-auto d-block">
+                    </figure>
+                    <p class="bg-dark text-white lead text-center">Estamos aquí para apoyarte a alcanzar tus metas y desarrollar tu potencial.</p>
+                    <address class="text-right text-white lead pr-5">
+            Av. Providencia #2380
+        </address>
+                    <div class="col text-right">
+                        <a href="#" class="btn btn-link">Subir en Pagina</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{% static 'main/js/funciones.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

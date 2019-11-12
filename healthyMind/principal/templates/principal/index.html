@@ -1,271 +1,138 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static 'principal/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'principal/css/styles.css' %}">
+{% extends 'principal/base_template.html' %} {% load static %}
 
-
-    <title>Healthy-Mind</title>
-</head>
-
-<body class="background">
-<!--Seccion Header/Navbar-->
-<div class="container">
-
-    <div class="row ">
-        <div class="col ">
-              <nav>
-                  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <!--Titulo/Icon-->
-                    <img src="{% static 'principal/img/logo.png' %}" alt="Logo Healthy-Mind" width="30" height="30" class="logo">
-                    <a href="{% url 'index' %}" class="navbar-brand text-muted">Healthy-Mind</a>
-
-                <!--Boton-Collapse (Aparicion de Icono menu para dispositivos Movil)-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
-                        aria-label="Menu de Navegacion">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                <!--Enlace ha utilizar-->
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="ul-navbar navbar-nav justify-content-center">
-                        <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead proximamente">Quienes Somos</a>
-                        </li>
-
-                        <li class="navbar-item">
-                            <a href="{% url 'ebooks' %}" class="header-items nav-link lead">E-Books</a>
-                        </li>
-
-                        <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead dropdown-toggle" id="submenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulos</a>
-                               <div class="dropdown" >
-                                   <div class="dropdown-menu" >
-                                       <a href="{% url 'articulos' %}" class="Articulos-Submenu dropdown-item" id="actitud">Actitud Positiva</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente"
-                                       >Proximamente</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente" >Proximamente</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
-                                   </div>
-                               </div>
-                        </li>
-
-                         <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead">Charlas</a>
-                        </li>
-
-                         <li class="navbar-item">
-                            <a href="{% url 'contacto' %}" class="header-items nav-link lead">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            `    </div>
-              </nav>
-        </div>
-    </div>
-</div>
 <!--BACKGROUND-->
 
-
-
-             <div class="row">
-        <header class="main-header">
-           <div class="col col-md-6 offset-md-3 info text-center">
+{% block content %}
+<div class="row">
+    <header class="main-header">
+        <div class="col col-md-6 offset-md-3 info text-center">
             <h1 class="display-4 text-center">HEALTHY-MIND</h1>
             <p class="p-header text-justify lead text-center text-white">Tú eres el cambio que quieres ver en el mundo. Si quieres cambiar el mundo, cámbiate a ti mismo.</p>
-            </div>
-
-
-        </header>
-
-
-
-     </div>
+        </div>
+    </header>
+</div>
 
 <!--SECTIONS-->
-        <div class="container">
+<div class="container">
+    <div class="col text-center">
+        <div class="jumbotron jumbotron-fluid bg-light">
+            <div class="row">
+                <div class="col">
+                    <h1 class="display-4 text-center">Quiénes somos</h1>
+                    <p>Somos una pareja de colegas y amigos que durante años hemos estudiado acerca del desarrollo personal. Tenemos un Coach en Desarrollo Humano Certificado por la International Coach Federation, la International Society of Neuro-Semantics y además variados cursos de psicología y técnicas para el desarrollo del ser.</p>
 
-                <div class="col text-center">
+                    <p>La vida es mucho más que nacer, crecer, reproducirse y morir. Como seres humanos hemos sido dotados de todas las herramientas para hacer de nuestra estancia en este mundo, una experiencia maravillosa. El problema radica en que con frecuencia, no somos conscientes de ello.</p>
 
+                    <p>Durante los últimos 25 años ha ocurrido una revolución en el campo del Desarrollo Humano, en donde técnicas como la Programación Neurolingüística, el Coaching y el Thetahealing han demostrado que es posible llevar una mejor calidad de vida si revisamos y modificamos nuestras creencias.</p>
 
+                    <p>Pues bien, utilizando estas poderosas técnicas, podemos apoyarte a crear la vida que quieres y mereces. ¡La decisión es tuya!</p>
+                    <p class="lead text-center text-danger text-uppercase"></p>
+                </div>
+            </div>
+        </div>
+        <!--Section/¿Que Encontraras?-->
+        <div class="jumbotron jumbotron-fluid bg-light">
+            <h2 class="display-4 text-center">¿Que Encontraras?</h2>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card mt-5">
+                        <figure>
+                            <img src="{% static 'principal/img/heartbeat.png' %}" class="card-img-top img-fluid" alt="">
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Salud mental</h3>
+                            <p class="card-text lead">Todas las semanas encontrarás un artículo nuevo, para comprender nuestra mente y emociones, en beneficio de nuestra salud mental.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card mt-5">
+                        <figure>
+                            <img src="{% static 'principal/img/iconBoo.PNG' %}" class="card-img-top img-fluid" alt="">
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">E-books</h3>
+                            <p class="card-text lead">En esta sección encontrarás libros para complementar y potenciar tú proceso de desarrollo personal. Los cuales puedes adquirir fácilmente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card mt-5">
+                        <figure>
+                            <img src="{% static 'principal/img/iconHand.PNG'%}" class="card-img-top img-fluid" alt="">
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Charlas </h3>
 
-            <div class="jumbotron jumbotron-fluid bg-light">
-           <div class="row">
-               <div class="col">
-                   <h1 class="display-4 text-center">Quiénes somos</h1> <p>Somos una pareja de colegas y amigos que durante años hemos estudiado acerca del desarrollo personal. Tenemos un Coach en Desarrollo Humano Certificado por la International Coach Federation, la International Society of Neuro-Semantics y además variados cursos de psicología y técnicas para el desarrollo del ser.</p>
+                            <p class="card-text lead"> Próximamente publicaremos la información acerca de charlas que realizaremos, y meditaciones guiadas con cuencos tibetanos para alcanzar la paz.</p>
+                        </div>
+                    </div>
+                </div>
 
-               <p>La vida es mucho más que nacer, crecer, reproducirse y morir. Como seres humanos hemos sido dotados de todas las herramientas para hacer de nuestra estancia en este mundo, una experiencia maravillosa. El problema radica en que con frecuencia, no somos conscientes de ello.</p>
+                <div class="col-6 col-sm-6 col-lg-3">
+                    <div class="card mt-5">
+                        <figure>
+                            <img src="{% static 'principal/img/logo.png' %}" class="card-img-top img-fluid" alt="">
+                        </figure>
+                        <div class="card-body">
+                            <h3 class="card-title">Conexión interpersonal</h3>
+                            <p class="card-text lead"> Te explicamos y enseñamos a utilizar las herramientas necesarias oara conectar contigo mismo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-               <p>Durante los últimos 25 años ha ocurrido una revolución en el campo del Desarrollo Humano, en donde técnicas como la Programación Neurolingüística, el Coaching y el Thetahealing han demostrado que es posible llevar una mejor calidad de vida si revisamos y modificamos nuestras creencias.</p>
-
-               <p>Pues bien, utilizando estas poderosas técnicas, podemos apoyarte a crear la vida que quieres y mereces.
-
-                   ¡La decisión es tuya!</p>
-
-                     <p class="lead text-center text-danger text-uppercase"></p>
-
-
-               </div>
-           </div>
         </div>
 
-<!--Section/¿Que Encontraras?-->
+        <!--SECTION /INFO-->
+
         <div class="jumbotron jumbotron-fluid bg-light">
 
-               <h2 class="display-4 text-center">¿Que Encontraras?</h2>
-                  <div class="row">
-			<div class="col-6 col-sm-6 col-lg-3">
-				<div class="card mt-5">
-				<figure>
-				    <img src="{% static 'principal/img/heartbeat.png' %}" class="card-img-top img-fluid" alt="">
-				</figure>
-					<div class="card-body">
-						<h3 class="card-title">Salud mental</h3>
-						<p class="card-text lead">Todas las semanas encontrarás un artículo nuevo, para comprender nuestra mente y emociones, en beneficio de nuestra salud mental.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-6 col-sm-6 col-lg-3">
-				<div class="card mt-5">
-				<figure>
-				    <img src="{% static 'principal/img/iconBoo.PNG' %}" class="card-img-top img-fluid" alt="">
-				</figure>
-                    <div class="card-body">
-						<h3 class="card-title">E-books</h3>
-						<p class="card-text lead">En esta sección encontrarás libros para complementar y potenciar tú proceso de desarrollo personal.
-						Los cuales puedes adquirir fácilmente.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-6 col-sm-6 col-lg-3">
-				<div class="card mt-5">
-				<figure>
-				    <img src="{% static 'principal/img/iconHand.PNG'%}" class="card-img-top img-fluid" alt="">
-				</figure>
-					<div class="card-body">
-						<h3 class="card-title">Charlas </h3>
-
-						<p class="card-text lead"> Próximamente publicaremos la información acerca de charlas que realizaremos, y meditaciones guiadas con cuencos tibetanos para alcanzar la paz.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-6 col-sm-6 col-lg-3">
-				<div class="card mt-5">
-				<figure>
-				    <img src="{% static 'principal/img/logo.png' %}" class="card-img-top img-fluid" alt="">
-				</figure>
-					<div class="card-body">
-						<h3 class="card-title">Conexión interpersonal</h3>
-						<p class="card-text lead"> Te explicamos y enseñamos a utilizar las herramientas necesarias oara conectar contigo mismo.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-     </div>
-
-<!--SECTION /INFO-->
-
-          <div class="jumbotron jumbotron-fluid bg-light">
-
-                 <div class="row">
+            <div class="row">
                 <div class="col-12 col-sm-12 col-lg-6">
                     <figure>
-                            <img src="{% static 'main/img/lamp.png' %}" alt="Lamp">
+                        <img src="{% static 'main/img/lamp.png' %}" alt="Lamp">
                     </figure>
-
 
                 </div>
 
-            <div class="col-12 col-sm-12 col-lg-6 pt-5 mt-5">
-                <section>
-                    <h3 class="text-center text-muted">Cambia tu forma de pensar y tú vida cambiará </h3>
-                     <article>
-                        <h5 class="text-center text-muted mt-5">¿Por qué nuestra mente nos crea trampas?</h5>
-                        <p class="lead text-center text-justify text-info">A través de años de estudio acerca de porqué nuestra mente funciona de cierta forma, se han llegado a conclusiones respecto de nuestras conexiones cerebrales, nuestra vida y nuestros pensamientos. Todos ellos en conjunto crean nuestra realidad.</p>
+                <div class="col-12 col-sm-12 col-lg-6 pt-5 mt-5">
+                    <section>
+                        <h3 class="text-center text-muted">Cambia tu forma de pensar y tú vida cambiará </h3>
+                        <article>
+                            <h5 class="text-center text-muted mt-5">¿Por qué nuestra mente nos crea trampas?</h5>
+                            <p class="lead text-center text-justify text-info">A través de años de estudio acerca de porqué nuestra mente funciona de cierta forma, se han llegado a conclusiones respecto de nuestras conexiones cerebrales, nuestra vida y nuestros pensamientos. Todos ellos en conjunto crean nuestra realidad.</p>
 
-                        <p class="lead text-center text-info">Las trampas que nos creamos ya sea por situaciones personales o canones sociales nos impiden avanzar, y nos vuelven infelices.
-                        Te enseñaremos como cambiar tú vida a través de como piensas en ella.</p>
-                     </article>
-                </section>
+                            <p class="lead text-center text-info">Las trampas que nos creamos ya sea por situaciones personales o canones sociales nos impiden avanzar, y nos vuelven infelices. Te enseñaremos como cambiar tú vida a través de como piensas en ella.</p>
+                        </article>
+                    </section>
+                </div>
             </div>
-            </div>
-
-
-
 
             <hr>
             <div class="row">
                 <div class="col-12 col-sm-12 col-lg-6 pt-5 mt-5">
                     <section>
-                       <h3 class="text-center text-muted ">¿Qué es lo que deseas?</h3>
+                        <h3 class="text-center text-muted ">¿Qué es lo que deseas?</h3>
                         <article>
-                          <h5 class="text-center text-muted mt-5">¿Cuál es el área de tu vida que no está funcionando como tu quisieras?</h5>
-                            <p class="lead text-center text-justify text-black-50">Eso que no está funcionando tiene que ver con patrones de conducta que se están repitiendo sin que tu te des cuenta y que te llevan al mismo tipo de pareja, a trabajos que no te satisfacen, negocios que no prosperan, a acciones que dañan tu salud y a una mala relación con el dinero.
-
-La solución a todo lo que no va bien en tu vida está dentro de ti y yo puedo ayudarte a descubrirla. Mediante poderosas técnicas de Desarrollo Humano como el Coaching y el Thetahealing, te ayudaré a ir al origen y encontrar la solución que te devolverá la seguridad, la alegría, el amor y la paz que necesitas.</p>
-
-
+                            <h5 class="text-center text-muted mt-5">¿Cuál es el área de tu vida que no está funcionando como tu quisieras?</h5>
+                            <p class="lead text-center text-justify text-black-50">Eso que no está funcionando tiene que ver con patrones de conducta que se están repitiendo sin que tu te des cuenta y que te llevan al mismo tipo de pareja, a trabajos que no te satisfacen, negocios que no prosperan, a acciones que dañan tu salud y a una mala relación con el dinero. La solución a todo lo que no va bien en tu vida está dentro de ti y yo puedo ayudarte a descubrirla. Mediante poderosas técnicas de Desarrollo Humano como el Coaching y el Thetahealing, te ayudaré a ir al origen y encontrar la solución que te devolverá la seguridad, la alegría, el amor y la paz que necesitas.</p>
                         </article>
                     </section>
                 </div>
-
                 <div class="col-12 col-sm-12 col-lg-6 ">
                     <figure>
                         <img src="{% static 'principal/img/emoji.png' %}" alt="Happy Mind" class="img-fluid imagen-happy-mind
-                             ">
+                    ">
                     </figure>
                 </div>
             </div>
-
-
-
-          </div>
-
-             <div class="row registro-index">
-                <div class="col text-center">
-                     <a href="{% url 'registro' %}" class="btn btn-outline-info btn-lg btn-block mt-4 mb-4">REGISTRATE</a>
-                </div>
-              </div>
-
-
-<!--SECCION FOOTER-->
-          <div class="row border-top py-2">
-              <div class="col">
-
-                  <footer class="bg-dark mt-20 footer">
-               <figure>
-                      <img src="{% static 'principal/img/logo.png' %}" width="50" alt="" class="img-fluid rounded mx-auto d-block">
-               </figure>
-                    <p class="bg-dark text-white lead text-center">Estamos aquí para apoyarte a alcanzar tus metas y desarrollar tu potencial.</p>
-                <address class="text-right text-white lead pr-5">
-                    Av. Providencia #2380
-                </address>
-
-                <div class="col text-right">
-				<a href="#" class="btn btn-link">Subir en Pagina</a>
-			</div>
-        </footer>
-              </div>
-          </div>
-
+        </div>
+        <div class="row registro-index">
+            <div class="col text-center">
+                <a href="{% url 'registro' %}" class="btn btn-outline-info btn-lg btn-block mt-4 mb-4">REGISTRATE</a>
             </div>
-
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-   <script src="{% static 'main/js/funciones.js' %}"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </div>
-    </body>
-                </html>
+        </div>
+        {% endblock %}
