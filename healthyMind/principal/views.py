@@ -19,3 +19,7 @@ def ebooks(request):
 #Vista para los Contactos
 def contacto(request):
     return render(request, 'principal/contacto/contactoMind.html')
+
+# vista index
+def index (request):
+    return render(request, 'principal/index.html')

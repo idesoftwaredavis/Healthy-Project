@@ -4,8 +4,9 @@ from . import views
 # Ingreso de todos los path correspondientes a la app 'main'
 
 urlpatterns=[
-    path('', views.registro, name = "registro"),
-    path('', views.articulos, name = "articulos"),
-    path('', views.ebooks, name = "ebooks"),
-    path('', views.contacto, name = "contacto"),
+    path('Registro/', views.registro, name = "registro"),
+    path('Articulos/', views.articulos, name = "articulos"),
+    path('Ebooks/', views.ebooks, name = "ebooks"),
+    path('Contacto/', views.contacto, name = "contacto"),
+    path('', views.index, name = "index")
 ]
