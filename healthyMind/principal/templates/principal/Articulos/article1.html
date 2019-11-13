@@ -1,88 +1,11 @@
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    
-    
-    <title>E-Books</title>
-</head>
-<body class="bg-light">
- 
+{% extends 'principal/base_template.html' %} {% load static %} {% block content %}
 
-  <div class="row">
-        <div class="col">
-              <nav>
-                  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <!--Titulo/Icon-->
-                <img src="../img/logo.png" alt="Logo Healthy-Mind" width="30" height="30" class="logo">
-                <a href="../index.html" class="navbar-brand text-muted">Healthy-Mind</a>
-                
-                <!--Boton-Collapse-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbar" aria-controls="navbar" aria-expanded="false"
-                    aria-label="Menu de Navegacion">
-                    
-                    <span class="navbar-toggler-icon"></span>
-                    
-                    </button>
-                    
-                <!--Enlace ha utilizar-->
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="ul-navbar navbar-nav justify-content-center">
-                        <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead">Quienes Somos</a>
-                        </li>
-                        
-                        <li class="navbar-item">
-                            <a href="../E-Books/ebooks.html" class="header-items nav-link lead">E-Books</a>
-                        </li>
-                        
-                        <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead dropdown-toggle" id="submenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulos</a>
-                               <div class="dropdown" >
-                                   <div class="dropdown-menu" >
-                                       <a href="../Articulos/article1.html" class="Articulos-Submenu dropdown-item">Actitud Positiva</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente" id="articulo1">Proximamente</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
-                                   </div>
-                               </div>
-                        </li>
-                        
-                         <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead">Charlas</a>
-                        </li>
-                        
-                         <li class="navbar-item">
-                            <a href="../contacto/contactoMind.html" class="header-items nav-link lead">Contacto</a>
-                        </li>
-                        
-                        <li class="navbar-item">
-                           <a href="#" class="header-items nav-link lead dropdown-toggle" id="submenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Interests</a>
-                           <div class="dropdown">
-                               <div class="dropdown-menu">
-                                   <a href="#" class="Articulos-Submenu dropdown-item proximamente">sdsd</a>
-                               </div>
-                           </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>       
-              </nav>
-               
-        </div>
-    </div> 
-    
-   
 <!--Carousel-->
-    <div class="container">
-    
-<!--Header-->
-    
-   <hr>
+<div class="container">
+
+    <!--Header-->
+
+    <hr>
     <div class="row">
         <div class="col mt-5">
             <header>
@@ -90,202 +13,157 @@
             </header>
         </div>
     </div>
-      
-       
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-12 col-lg-8">
-                <figure>
-                    <figcaption class="figure-caption text-center">
-                        <img src="../img/3.jpg" alt="Imagen yoga actitud positiva" class="img-fluid img-thumbnail">
-                        actitud positiva
-                         <hr>
-                    </figcaption>
-                </figure>
-            </div>
-             
-             <div class="col-12 col-sm-12 col-md-12 col-lg-4 align-self-start mt-3 bg-light d-none d-sm-block ">
-                <aside class="aside-article1">
-                   <h3 class="lead text-center "><mark>Descuentos y promociones</mark></h3>
-                   <hr>
-                    <a href="#"  class="text-info ">Escoje las mejores promociones y descuentos en el libro <strong>Tus zonas erroneas</strong></a>
-                    <hr>
-                    <a href="#" class="text-info">Escoje las mejores promociones y descuentos en el libro <strong>El poder del ahora</strong></a>
-                    <hr>
-                    <a href="#" class="text-info">Escoje las mejores promociones y descuentos en el libro <strong>Cómo cambiar de mentalidad</strong></a>
-                    <hr>                  
-                </aside>
-            </div>
-        </div>
-        
-       
-        
+
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
-            <section>
-              <h3 class="text-center" hidden>Titulo seccion</h3>
-               <article>
-                  <h5 class="text-center">Hábitos para mejorar nuestra vida</h5>
-                   <p class="p-book lead text-center mt-4 text-muted">¿Notas que tu vida es demasiado complicada, te cuesta disfrutar de las cosas y a menudo te sientes agobiado, estresado o decaído?</p><br>
-
- <p>A veces disponer de un bienestar mental que te permita estar contento con tu vida puede resultar más complicado de lo que uno espera.</p><br>
-<p>En la vida nos pasan cosas continuamente y adaptarnos a todas ellas de forma adecuada no siempre es sencillo.</p><br>
-<p>Sin embargo, a pesar de que tengas muchos estímulos que te lo puedan poner difícil, puedes alcanzar el bienestar psicológico ya que tu estado mental depende de ti.</p><br>
- <p> A continuación te proponemos 10 hábitos muy prácticos para promover tu bienestar mental ¡no te los pierdas!</p><br>
-<p>¿Qué es el bienestar mental?
-    La Organización Mundial de la Salud define el estado de bienestar mental como un estado psicológico en el cual el individuo es consciente de sus propias capacidades, puede afrontar las tensiones normales de la vida, puede trabajar de forma productiva y fructífera y es capaz de hacer una contribución a su comunidad.</p><br>
-<p>Dicho de otra forma: el bienestar mental es ese estado que nos permite funcionar de una forma adecuada y saludable.
-
-El termino de bienestar mental no es sinónimo a ausencia de desorden mental sino que hace referencia a un estado de bonanza que engloba las 5 dimensiones que configuran a la persona: física, mental, emocional, social y espiritual.
-
-Pero ojo:. el ser humano no actúa de forma pacífica en el bienestar mental sino que lo hace de una forma activa.
-
-El bienestar psicológico lo creamos nosotros mismos en función de cómo interpretamos las cosas y cómo vivimos nuestras respectivas vidas.</p>
-
-<p>Por ejemplo:  José, un hombre de 57 años, trabaja 50 horas semanales con un sueldo de 600 euros al mes, una familia que mantener y sin una gran cantidad de amistades y relaciones sociales disfruta en su vida de un completo bienestar mental.</p>
-
-<p>En cambio, Mariano, un hombre de 60 años, con un gran poder adquisitivo que disfruta de todo tipo de lujos y facilidades vitales posee un estado mental tóxico que le impide disfrutar de su vida.
-
-A priori parecería que los estímulos de la vida de José invitarían a tener mayores dificultades para tener un buen estado mental, en cambio los de Mariano facilitarían totalmente su capacidad para disfrutar de la vida.
-
-Sin embargo, el bienestar mental no depende de estos estímulos, sino de cómo los interpretamos nosotros y de la forma que encaramos nuestras vidas.
-
-Vayamos a ver 10 hábitos que si los realizamos adecuadamente nos pueden ayudar enormemente a alcanzar un estado de bienestar mental.</p>
-
-
-                 
-               </article>   
-                        
-            </section>
-            
-                <figure>
-                    <figcaption class="figure-caption text-center lead">
-                        <img src="../img/6.jpg" alt="Response Image" class="img-fluid">
-                        menos es mas
-                    </figcaption>
-                </figure>
-                
-                <section>
-                   <h3 class="text-center" hidden>Priorizando objetivos</h3>
-                    <article>
-                      <h5 class="text-center" hidden>Titulo Articulo</h5>
-                       <h3 class="text-warning">¿ Estas priorizando tus objetivos ?</h3>
-                        <p class="lead text-muted mt-4">Es importante que pienses cuidadosamente por qué realizas una actividad en concreto y qué es lo que esperas obtener de ella. Para ello debes establecer cuáles son tus metas más importantes y determinar si tu horario de acuerdo con este ranking. Para lograrlo, sigue estos seis pasos:</p><br>
-
-<p>1. Escribe todo
-Incluye las tareas rutinarias que tienes diaria o semanalmente así como tus grandes proyectos profesionales. Si pasas todo tu tiempo respondiendo a las crisis o haciendo las tareas de los demás pronto te hundirás y nunca lograrás tus metas. 
-
-Para poder salir adelante, debes pensar qué es lo que quieres hacer. Esto puede incluir objetivos a largo plazo como avanzar en tu carrera, o a corto plazo como desarrollar una nueva habilidad. Incluye todas estas aspiraciones en tu lista. Sé lo más detallado posible y añade todas las tareas y metas que se te ocurran.</p><br>
-
-<p>2. Organízate según el tiempo
-Divide tu lista en tres categorías de tiempo:
-
-- Aspiraciones en tu carrera: Se refiere a los objetivos en largo plazo, es decir a cumplir en al menos dentro de cinco años.
-
-- Objetivos: Metas profesionales a alcanzar entre tres meses y dos años.
-
-- Propósitos: Acciones que deberían guiar tu trabajo diario o semanal. 
-
-Asegúrate que cada objetivo contenga uno o dos propósitos asociados. Si alguno de ellos no tuviera un propósito, piensa cuál será el siguiente paso que debes dar para alcanzar esa meta en particular e inclúyelo en la lista. 
-</p><br>
-
-<p>3. Jerarquiza tus objetivos
-Piensa en qué es lo que quieres hacer, para qué eres bueno y qué necesita el mundo de ti. Estas ideas son completamente diferentes la una de la otra. 
-
-Determinar qué es lo que quieres <em>es crítico para jerarquizar tus decisiones </em> . Por ejemplo, si realmente deseas inventar el nuevo producto de tu empresa, entonces debes rankear ese objetivo hasta arriba.
-
-Después, pregúntate a ti <strong>mismo en qué sobresales y qué objetivos van de acuerdo  </strong> con tus fortalezas. Nuevamente, debes posicionar este objetivo en donde tengas una ventaja competitiva en los primeros lugares de tu ranking puesto que será más fácil que los consigas debido a tu personalidad o habilidades. 
-
-Finalmente, pregúntate qué es lo que el mundo necesita de ti. No puedes ser completamente productivo si sólo observas el lado de la oferta. También debes considerar el de la demanda; es decir, lo que el mundo, tu empresa o tu jefe necesitan de ti. 
-
-Escribe dos o tres objetivos principales para tu organización y piensa cómo medirás tu desempeño. Pregúntate a ti mismo qué puedes cambiar que te ayude a alcanzar el éxito: quizá sea visitar más clientes o reclutar talento.</p><br>
-
-<p>4. Jerarquiza tus propósitos
-Tus propósitos, o acciones a seguir, por lo general se pueden dividir en dos categorías: propósitos facilitadores, que son los que <strong> ayudan a cumplir objetivos, y los propósitos </strong> asignados, es decir aquellos que te fueron dados. Primero decide qué objetivos van en qué categorías y después haz un ranking de los más a los menos importantes. 
-
-Por ejemplo, terminar mi libro era algo muy importante para mí, por lo que escribir el primer borrador de un capítulo solía ser mi <mark> propósito </mark> facilitador principal. Estos propósitos también pueden impulsar un objetivo de otras maneras. Imagina que te asignan un nuevo proyecto (es decir, un objetivo) que requiere de tu completa atención. Entonces, querrás deshacerte de la mayor cantidad de pendientes posible. Terminar los propósitos menos importantes también te alejará de preocupaciones. 
-
-Enlista y jerarquiza tus propósitos facilitadores basándote en la importancia del objetivo y en cuánto ayuda un propósito en particular a alcanzarlo.
-
-Las tareas asignadas se refieren a los pendientes diarios que por lo general suelen parecer ajenos al gran panorama. Son muy diferentes a los facilitadores que te ayudan a obtener tus objetivos. Aunque las tareas asignadas son inmediatas y concretas, esto no significa que sean lo suficientemente importantes para consumir tu tiempo. Considéralas con prioridad baja y usa el menor tiempo posible en ellas. </p>
-                    </article>
-                </section>
-                
-            <section>
-               <h3 class="text-center" hidden>ssd </h3>
-                <article>
-                   <h5 class="text-center" hidden>ssd </h5>
-                    <div class="jumbotron jumbotron-fluid">
-          
-                        <h2 class="display-4  text-center text-muted">Puntos a Considerar</h2>
-                        <ul>
-                            <li>Tu visión/Objetivo</li>
-                            
-                            <li>Submetas: Plan de acción y ser realista</li>
-                            
-                            <li>Prioriza tus Objetivos</li>
-                            
-                            <li>Desechar malos pensamientos-Vive el presente</li>
-                            
-                            <li>Visualizar tu entorno</li>
-                        </ul>
-                        <p class="lead text-info d-flex justify-content-center">Recuerda meditar, ésta práctica tiene múltiples beneficios... entre ellos ayuda a descansar y relajar nuestra mente, reduce la presión sanguínea, mejora la memoria, mejora la estabilidad emocional, ayuda a tomar mayor consciencia personal, relaja la tensión muscular, mejora la concentración y contribuye a mejorar el estado anímico. Entre otros. </p>
-         
-                    </div>
-                </article>
-            </section>
-            
-            <section>
-               <h3 class="text-center" hidden>sdsd </h3>
-                <article>
-                   <h5 class="text-center" hidden>sd </h5>
-                    <h3 class="display-4 text-muted">Resumen</h3>
-                    <p class="lead"> <mark>recomendamos </mark> Te  escuchar mantras mientras meditas.
-                    Disfruta!</p>
-                </article>
-            </section>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8">
+            <figure>
+                <figcaption class="figure-caption text-center">
+                    <img src="../img/3.jpg" alt="Imagen yoga actitud positiva" class="img-fluid img-thumbnail"> actitud positiva
+                    <hr>
+                </figcaption>
+            </figure>
         </div>
-        
-         <div class="col-4 aside-article1 d-none d-md-block mt-4">
-            <aside>
-                <h3 class="lead text-dark mt-2 bg-light"><mark>Libros relacionados</mark></h3>
-                
-                <a href="#" class="lead text-dark"><blockquote>Libro rutinas sanadoras actualizado 2019 </blockquote></a>
-                
-                 <a href="#" class="lead text-dark"><blockquote>Libro reflexiones por la mañana actualizado 2019 </blockquote></a>
-                
-                 <a href="#" class="lead text-dark"><blockquote>Libro amor propio actualizado 2019 </blockquote></a>
-                
-                 <a href="#" class="lead text-dark"><blockquote>Libro como cambair mi vida actualizado 2019 </blockquote></a>
-                
-            
-                
-                 <a href="#" class="lead text-dark"><blockquote>Libro El poder de la palabra actualizado 2019 </blockquote></a>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 align-self-start mt-3 bg-light d-none d-sm-block ">
+            <aside class="aside-article1">
+                <h3 class="lead text-center "><mark>Descuentos y promociones</mark></h3>
+                <hr>
+                <a href="#" class="text-info ">Escoje las mejores promociones y descuentos en el libro <strong>Tus zonas erroneas</strong></a>
+                <hr>
+                <a href="#" class="text-info">Escoje las mejores promociones y descuentos en el libro <strong>El poder del ahora</strong></a>
+                <hr>
+                <a href="#" class="text-info">Escoje las mejores promociones y descuentos en el libro <strong>Cómo cambiar de mentalidad</strong></a>
+                <hr>
             </aside>
         </div>
     </div>
-    
-       
-       
-    </div>
-    
-<!--SECCION FOOTER-->
-    <footer class="bg-dark footer mt-4">
-        <p class="bg-dark text-white lead text-center">Enjoy your life</p>
-            <figure>
-                <img src="../img/logo.png" width="50" alt="" class="img-fluid rounded mx-auto d-block">
-            </figure>
-            <address class="text-right text-white lead pr-5">
-                Providencia, calle 1234
-            </address>
-    </footer>
 
-   
-    
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+            <section>
+                <h3 class="text-center" hidden>Titulo seccion</h3>
+                <article>
+                    <h5 class="text-center">Hábitos para mejorar nuestra vida</h5>
+                    <p class="p-book lead text-center mt-4 text-muted">¿Notas que tu vida es demasiado complicada, te cuesta disfrutar de las cosas y a menudo te sientes agobiado, estresado o decaído?</p>
+                    <br>
+
+                    <p>A veces disponer de un bienestar mental que te permita estar contento con tu vida puede resultar más complicado de lo que uno espera.</p>
+                    <br>
+                    <p>En la vida nos pasan cosas continuamente y adaptarnos a todas ellas de forma adecuada no siempre es sencillo.</p>
+                    <br>
+                    <p>Sin embargo, a pesar de que tengas muchos estímulos que te lo puedan poner difícil, puedes alcanzar el bienestar psicológico ya que tu estado mental depende de ti.</p>
+                    <br>
+                    <p> A continuación te proponemos 10 hábitos muy prácticos para promover tu bienestar mental ¡no te los pierdas!</p>
+                    <br>
+                    <p>¿Qué es el bienestar mental? La Organización Mundial de la Salud define el estado de bienestar mental como un estado psicológico en el cual el individuo es consciente de sus propias capacidades, puede afrontar las tensiones normales de la vida, puede trabajar de forma productiva y fructífera y es capaz de hacer una contribución a su comunidad.</p>
+                    <br>
+                    <p>Dicho de otra forma: el bienestar mental es ese estado que nos permite funcionar de una forma adecuada y saludable. El termino de bienestar mental no es sinónimo a ausencia de desorden mental sino que hace referencia a un estado de bonanza que engloba las 5 dimensiones que configuran a la persona: física, mental, emocional, social y espiritual. Pero ojo:. el ser humano no actúa de forma pacífica en el bienestar mental sino que lo hace de una forma activa. El bienestar psicológico lo creamos nosotros mismos en función de cómo interpretamos las cosas y cómo vivimos nuestras respectivas vidas.</p>
+
+                    <p>Por ejemplo: José, un hombre de 57 años, trabaja 50 horas semanales con un sueldo de 600 euros al mes, una familia que mantener y sin una gran cantidad de amistades y relaciones sociales disfruta en su vida de un completo bienestar mental.</p>
+
+                    <p>En cambio, Mariano, un hombre de 60 años, con un gran poder adquisitivo que disfruta de todo tipo de lujos y facilidades vitales posee un estado mental tóxico que le impide disfrutar de su vida. A priori parecería que los estímulos de la vida de José invitarían a tener mayores dificultades para tener un buen estado mental, en cambio los de Mariano facilitarían totalmente su capacidad para disfrutar de la vida. Sin embargo, el bienestar mental no depende de estos estímulos, sino de cómo los interpretamos nosotros y de la forma que encaramos nuestras vidas. Vayamos a ver 10 hábitos que si los realizamos adecuadamente nos pueden ayudar enormemente a alcanzar un estado de bienestar mental.</p>
+
+                </article>
+
+            </section>
+
+            <figure>
+                <figcaption class="figure-caption text-center lead">
+                    <img src="../img/6.jpg" alt="Response Image" class="img-fluid"> menos es mas
+                </figcaption>
+            </figure>
+
+            <section>
+                <h3 class="text-center" hidden>Priorizando objetivos</h3>
+                <article>
+                    <h5 class="text-center" hidden>Titulo Articulo</h5>
+                    <h3 class="text-warning">¿ Estas priorizando tus objetivos ?</h3>
+                    <p class="lead text-muted mt-4">Es importante que pienses cuidadosamente por qué realizas una actividad en concreto y qué es lo que esperas obtener de ella. Para ello debes establecer cuáles son tus metas más importantes y determinar si tu horario de acuerdo con este ranking. Para lograrlo, sigue estos seis pasos:</p>
+                    <br>
+
+                    <p>1. Escribe todo Incluye las tareas rutinarias que tienes diaria o semanalmente así como tus grandes proyectos profesionales. Si pasas todo tu tiempo respondiendo a las crisis o haciendo las tareas de los demás pronto te hundirás y nunca lograrás tus metas. Para poder salir adelante, debes pensar qué es lo que quieres hacer. Esto puede incluir objetivos a largo plazo como avanzar en tu carrera, o a corto plazo como desarrollar una nueva habilidad. Incluye todas estas aspiraciones en tu lista. Sé lo más detallado posible y añade todas las tareas y metas que se te ocurran.</p>
+                    <br>
+
+                    <p>2. Organízate según el tiempo Divide tu lista en tres categorías de tiempo: - Aspiraciones en tu carrera: Se refiere a los objetivos en largo plazo, es decir a cumplir en al menos dentro de cinco años. - Objetivos: Metas profesionales a alcanzar entre tres meses y dos años. - Propósitos: Acciones que deberían guiar tu trabajo diario o semanal. Asegúrate que cada objetivo contenga uno o dos propósitos asociados. Si alguno de ellos no tuviera un propósito, piensa cuál será el siguiente paso que debes dar para alcanzar esa meta en particular e inclúyelo en la lista.
+                    </p>
+                    <br>
+
+                    <p>3. Jerarquiza tus objetivos Piensa en qué es lo que quieres hacer, para qué eres bueno y qué necesita el mundo de ti. Estas ideas son completamente diferentes la una de la otra. Determinar qué es lo que quieres <em>es crítico para jerarquizar tus decisiones </em> . Por ejemplo, si realmente deseas inventar el nuevo producto de tu empresa, entonces debes rankear ese objetivo hasta arriba. Después, pregúntate a ti <strong>mismo en qué sobresales y qué objetivos van de acuerdo  </strong> con tus fortalezas. Nuevamente, debes posicionar este objetivo en donde tengas una ventaja competitiva en los primeros lugares de tu ranking puesto que será más fácil que los consigas debido a tu personalidad o habilidades. Finalmente, pregúntate qué es lo que el mundo necesita de ti. No puedes ser completamente productivo si sólo observas el lado de la oferta. También debes considerar el de la demanda; es decir, lo que el mundo, tu empresa o tu jefe necesitan de ti. Escribe dos o tres objetivos principales para tu organización y piensa cómo medirás tu desempeño. Pregúntate a ti mismo qué puedes cambiar que te ayude a alcanzar el éxito: quizá sea visitar más clientes o reclutar talento.</p>
+                    <br>
+
+                    <p>4. Jerarquiza tus propósitos Tus propósitos, o acciones a seguir, por lo general se pueden dividir en dos categorías: propósitos facilitadores, que son los que <strong> ayudan a cumplir objetivos, y los propósitos </strong> asignados, es decir aquellos que te fueron dados. Primero decide qué objetivos van en qué categorías y después haz un ranking de los más a los menos importantes. Por ejemplo, terminar mi libro era algo muy importante para mí, por lo que escribir el primer borrador de un capítulo solía ser mi
+                        <mark> propósito </mark> facilitador principal. Estos propósitos también pueden impulsar un objetivo de otras maneras. Imagina que te asignan un nuevo proyecto (es decir, un objetivo) que requiere de tu completa atención. Entonces, querrás deshacerte de la mayor cantidad de pendientes posible. Terminar los propósitos menos importantes también te alejará de preocupaciones. Enlista y jerarquiza tus propósitos facilitadores basándote en la importancia del objetivo y en cuánto ayuda un propósito en particular a alcanzarlo. Las tareas asignadas se refieren a los pendientes diarios que por lo general suelen parecer ajenos al gran panorama. Son muy diferentes a los facilitadores que te ayudan a obtener tus objetivos. Aunque las tareas asignadas son inmediatas y concretas, esto no significa que sean lo suficientemente importantes para consumir tu tiempo. Considéralas con prioridad baja y usa el menor tiempo posible en ellas. </p>
+                </article>
+            </section>
+
+            <section>
+                <h3 class="text-center" hidden>ssd </h3>
+                <article>
+                    <h5 class="text-center" hidden>ssd </h5>
+                    <div class="jumbotron jumbotron-fluid">
+
+                        <h2 class="display-4  text-center text-muted">Puntos a Considerar</h2>
+                        <ul>
+                            <li>Tu visión/Objetivo</li>
+
+                            <li>Submetas: Plan de acción y ser realista</li>
+
+                            <li>Prioriza tus Objetivos</li>
+
+                            <li>Desechar malos pensamientos-Vive el presente</li>
+
+                            <li>Visualizar tu entorno</li>
+                        </ul>
+                        <p class="lead text-info d-flex justify-content-center">Recuerda meditar, ésta práctica tiene múltiples beneficios... entre ellos ayuda a descansar y relajar nuestra mente, reduce la presión sanguínea, mejora la memoria, mejora la estabilidad emocional, ayuda a tomar mayor consciencia personal, relaja la tensión muscular, mejora la concentración y contribuye a mejorar el estado anímico. Entre otros. </p>
+
+                    </div>
+                </article>
+            </section>
+
+            <section>
+                <h3 class="text-center" hidden>sdsd </h3>
+                <article>
+                    <h5 class="text-center" hidden>sd </h5>
+                    <h3 class="display-4 text-muted">Resumen</h3>
+                    <p class="lead">
+                        <mark>recomendamos </mark> Te escuchar mantras mientras meditas. Disfruta!
+                    </p>
+                </article>
+            </section>
+        </div>
+
+        <div class="col-4 aside-article1 d-none d-md-block mt-4">
+            <aside>
+                <h3 class="lead text-dark mt-2 bg-light"><mark>Libros relacionados</mark></h3>
+
+                <a href="#" class="lead text-dark">
+                    <blockquote>Libro rutinas sanadoras actualizado 2019 </blockquote>
+                </a>
+
+                <a href="#" class="lead text-dark">
+                    <blockquote>Libro reflexiones por la mañana actualizado 2019 </blockquote>
+                </a>
+
+                <a href="#" class="lead text-dark">
+                    <blockquote>Libro amor propio actualizado 2019 </blockquote>
+                </a>
+
+                <a href="#" class="lead text-dark">
+                    <blockquote>Libro como cambair mi vida actualizado 2019 </blockquote>
+                </a>
+
+                <a href="#" class="lead text-dark">
+                    <blockquote>Libro El poder de la palabra actualizado 2019 </blockquote>
+                </a>
+            </aside>
+        </div>
+    </div>
+
+</div>
 <!--SCRIPTS-->
-       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-          <script src="../js/funciones.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="../js/funciones.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{% endblock %}

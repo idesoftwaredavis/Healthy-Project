@@ -1,85 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/cssContacto.css">
-    <title>Formulario</title>
-</head>
-<body class="contenedor-Contacto">
+{% extends 'principal/base_template.html' %} {% load static %} {% block content %}
+<div class="container">
 
-     
-       
-       
-    <div class="row margen">
-        <div class="col ">
-              <nav>
-                  <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                <!--Titulo/Icon-->
-                    <img src="../img/logo.png" alt="Logo Healthy-Mind" width="30" height="30" class="logo">
-                    <a href="../index.html" class="navbar-brand text-muted">Healthy-Mind</a>
-
-                <!--Boton-Collapse (Aparicion de Icono menu para dispositivos Movil)-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbar" aria-controls="navbar" aria-expanded="false"
-                        aria-label="Menu de Navegacion">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                <!--Enlace ha utilizar-->
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="ul-navbar navbar-nav justify-content-center">
-                        <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead proximamente">Quienes Somos</a>
-                        </li>
-                        
-                        <li class="navbar-item">
-                            <a href="../E-Books/ebooks.html" class="header-items nav-link lead">E-Books</a>
-                        </li>
-                        
-                        <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead dropdown-toggle" id="submenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Articulos</a>
-                               <div class="dropdown" >
-                                   <div class="dropdown-menu" >
-                                       <a href="../Articulos/article1.html" class="Articulos-Submenu dropdown-item" id="actitud">Actitud Positiva</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente"
-                                       >Proximamente</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente" >Proximamente</a>
-                                       <a href="#" class="Articulos-Submenu dropdown-item proximamente">Proximamente</a>
-                                   </div>
-                               </div>
-                        </li>
-                        
-                         <li class="navbar-item">
-                            <a href="#" class="header-items nav-link lead proximamente">Charlas</a>
-                        </li>
-                        
-                         <li class="navbar-item">
-                            <a href="../contacto/contactoMind.html" class="header-items nav-link lead">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-            `    </div>       
-              </nav>
-        </div>
-    </div>
-
-  
-  
-  
-  
-   <div class="container">
-      
-  
-      
-      
-      
-       <!--La clase, para el css.-->
-       <!--El id, para el JavaScript.-->
-        <form action="#" class="formulario" id="formulario" name="formulario" method="post">
-            <div class="contenedor-inputs">
-              <div class="row ">
-        <div class="col-md-12">
+    <!--La clase, para el css.-->
+    <!--El id, para el JavaScript.-->
+    <form action="#" class="formulario" id="formulario" name="formulario" method="post">
+        <div class="contenedor-inputs">
+            <div class="row ">
+                <div class="col-md-12">
                     <fieldset>
                         <legend class="text-center text-danger">Contacto</legend>
 
@@ -88,74 +15,64 @@
                                 <input id="txtNombre" name="name" type="text" placeholder="Nombres" class="form-control">
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
-                          
+
                             <div class="col">
                                 <input id="txtApellidos" name="name" type="text" placeholder="Apellidos" class="form-control estiloInput">
                             </div>
                         </div>
 
                         <div class="form-group">
-                           
+
                             <div class="col">
                                 <input id="txtEmail" name="email" type="text" placeholder="Correo" class="form-control estiloInput">
                             </div>
                         </div>
 
-                        
                         <div class="form-group">
-                            
+
                             <div class="col">
                                 <textarea class="form-control" id="txtArea" name="message" placeholder="Ingresa tu mensaje aquí." rows="7"></textarea>
                             </div>
                         </div>
-                        
-                        
+
                         <div class="form-group">
-                            
+
                             <select class="custom-select custom-select-lg mb-3" id="combobox">
-                                  <option selected>Contacto por: Seleccione</option>
-                                  <option value="1">Contacto por : Desarrollo Personal</option>
-                                  <option value="2">Contacto por : Bienestar Personal</option>
-                                  <option value="3">Contacto por : Clase Meditacion</option>
+                                <option selected>Contacto por: Seleccione</option>
+                                <option value="1">Contacto por : Desarrollo Personal</option>
+                                <option value="2">Contacto por : Bienestar Personal</option>
+                                <option value="3">Contacto por : Clase Meditacion</option>
                             </select>
                         </div>
-                        
+
                         <div class="terminos">
                             <input type="checkbox" name="terminos" id="terminos">
                             <label for="terminos" class="text-white">Acepto terminos y condiciones</label>
                         </div>
-                        
+
                         <ul class="error" id="error">
-                         </ul>
-                         
-                         
-                    </fieldset>                
+                        </ul>
+
+                    </fieldset>
+                </div>
+            </div>
+
         </div>
-    </div>  
-                
-                
-                
-            </div>
-            
-            <div class="form-group">
-                             <div class="col-md-12 text-center">
-                                  <input type="submit" class="btn" value="Registrate">
-                         </div>
-            </div>
-        </form>   
-    </div>
 
-    
-    
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    
-     <script src="../js/validarContacto.js"></script>
-     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <div class="form-group">
+            <div class="col-md-12 text-center">
+                <input type="submit" class="btn" value="Registrate">
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="../js/validarContacto.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock %}

@@ -1,5 +1,6 @@
-{% extends 'principal/base_template.html' %} {% load static %}
+{% extends 'principal/base_template.html' %}
 
+{% load static %}
 <!--BACKGROUND-->
 
 {% block content %}
@@ -93,7 +94,7 @@
             <div class="row">
                 <div class="col-12 col-sm-12 col-lg-6">
                     <figure>
-                        <img src="{% static 'main/img/lamp.png' %}" alt="Lamp">
+                        <img src="{% static 'principal/img/lamp.png' %}" alt="Lamp">
                     </figure>
 
                 </div>
@@ -135,4 +136,4 @@
                 <a href="{% url 'registro' %}" class="btn btn-outline-info btn-lg btn-block mt-4 mb-4">REGISTRATE</a>
             </div>
         </div>
-        {% endblock %}
+{% endblock %}

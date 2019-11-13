@@ -129,8 +129,8 @@ body
 
 .contenedor-Registro
 {
-    
-     background:url(../img/overlay.png);
+
+     background:url('/static/principal/img/overlay.png');
     border-radius: 200px 200px 200px 200px;
    
     
