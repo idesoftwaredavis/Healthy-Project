@@ -45,7 +45,6 @@
                     <p>Durante los últimos 25 años ha ocurrido una revolución en el campo del Desarrollo Humano, en donde técnicas como la Programación Neurolingüística, el Coaching y el Thetahealing han demostrado que es posible llevar una mejor calidad de vida si revisamos y modificamos nuestras creencias.</p>
 
                     <p>Pues bien, utilizando estas poderosas técnicas, podemos apoyarte a crear la vida que quieres y mereces. ¡La decisión es tuya!</p>
-
             </div>
         </div>
     </div>
@@ -58,156 +57,23 @@
     </div>
 
     <div class="row py-4">
+        {% for libro in libro %}
         <div class="col-12 col-sm-6 col-lg-3 mb-4">
+
             <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro10.jpg' %}" alt="">
+                <img class="card-img-top" src="{{libro.image.url}}" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">B.A.Y</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                    <h3 class="card-title">{{libro.title}}</h3>
+                    <p class="card-text">{{libro.short_description}}</p>
+                    <p class= "card-text">{{libro.price}}</p>
+
                     <a href="#" class="btn btn-sm btn-warning">Comprar</a>
                     <a href="#" class="btn btn-sm btn-secondary">Detalles</a>
                 </div>
             </div>
         </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro8.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">Saltar al Vacio</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro9.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">Reinventarse</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro2.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">Controle su Destino</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro3.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">7 Habitos</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro4.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">Lo Unico</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro5.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">Tus Zonas Eroneas</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro6.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">Deja de ser tú</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card">
-                <img class="card-img-top" src="{% static 'principal/img/libro7.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">El antídoto</h3>
-                    <p class="card-text ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="btn btn-sm btn-warning">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-warning">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card fondoCard">
-                <img class="card-img-top" src="{% static 'principal/img/libro13.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title text-muted">Cameras</h3>
-                    <p class="card-text text-danger">
-                        <mark> AGOTADO</mark>
-                    </p>
-                    <a href="#" class="btn btn-sm btn-dark btn disabled">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-dark btn disabled">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card fondoCard">
-                <img class="card-img-top" src="{% static 'principal/img/libro11.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title text-muted">Cameras</h3>
-                    <p class="card-text text-danger">
-                        <mark> AGOTADO</mark>
-                    </p>
-                    <a href="#" class="btn btn-sm btn-dark btn disabled">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-dark btn disabled">Detalles</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <div class="card fondoCard">
-                <img class="card-img-top" src="{% static 'principal/img/libro10.jpg' %}" alt="">
-                <div class="card-body">
-                    <h3 class="card-title text-muted">Cameras</h3>
-                    <p class="card-text">
-                        <mark> AGOTADO</mark>
-                    </p>
-                    <a href="#" class="btn btn-sm btn-dark btn disabled">Comprar</a>
-                    <a href="#" class="btn btn-sm btn-dark btn disabled">Detalles</a>
-                </div>
-            </div>
-        </div>
-    </div>
+        {% endfor %}
 
     <footer>
         <div class="row border-top py-5">
@@ -230,4 +96,4 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-{% endblock %}	
+{% endblock %}
