@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 # Aca se crean las vistas para despues ser llamadas desde el urls.py
 
 
@@ -12,9 +11,6 @@ def registro(request):
 def articulos(request):
     return render(request, 'principal/Articulos/article1.html')
 
-#Vista para los E-ebooks
-def ebooks(request):
-    return render(request, 'principal/E-Books/ebooks.html')
 
 #Vista para los Contactos
 def contacto(request):
