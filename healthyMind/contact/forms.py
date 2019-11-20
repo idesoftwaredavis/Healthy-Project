@@ -6,7 +6,7 @@ from .models import contact
 class formContact(forms.ModelForm):
     class Meta:
         model = contact
-        fields = '__all__'
+        fields =['nombres','apellidos','email','mensaje','title']
 
 class form (forms.Form):
     choices_contact = (

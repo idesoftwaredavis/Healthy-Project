@@ -4,5 +4,4 @@ from .models import Book
 #Vista para los E-ebooks
 def ebooks(request):
     libro = Book.objects.all()
-
     return render(request, 'store/ebooks.html',{'libro': libro})
