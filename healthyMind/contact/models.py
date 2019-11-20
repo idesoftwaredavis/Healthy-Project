@@ -3,6 +3,7 @@ from django.db import models
 class contact(models.Model):
     nombres = models.CharField(verbose_name="nombre", blank = False, null = False, max_length= 50)
     apellidos = models.CharField(verbose_name="apellidos", blank = False, null = False, max_length = 50)
+    email = models.EmailField(verbose_name = "Email", blank = False, null = False, max_length = 50)
     mensaje = models.CharField(verbose_name="mensaje", blank = False, null = False, max_length = 250)
 
     choices_contact = (

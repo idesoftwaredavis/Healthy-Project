@@ -4,7 +4,7 @@ body
     margin:0;
     padding: 0;
     margin-top: 40px;
-  
+
 }
 
 .Articulos-Submenu
@@ -12,7 +12,7 @@ body
     text-align: center;
     font-family: cursive;
     font-size: 20px;
-    
+
 }
 
 .header-items
@@ -27,7 +27,7 @@ body
 
 .thumbnail
 {
-    
+
     position: relative;
 }
 
@@ -54,7 +54,7 @@ body
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
 
 
@@ -68,7 +68,7 @@ body
 {
     padding-top: 50px;
     font-size: 30px;
-    
+
 }
 
 
@@ -81,7 +81,7 @@ body
 {
     justify-content: center;
     margin-top:400px;
-   
+
 }
 
 .check
@@ -120,20 +120,20 @@ body
 
 .aside-article1
 {
-    
+
     border-style:groove;
     text-align: center;
-    border:2px solid 
+    border:2px solid
 }
 
 
 .contenedor-Registro
 {
 
-     background:url('/static/principal/img/overlay.png');
+     background:url('../img/overlay.png');
     border-radius: 200px 200px 200px 200px;
-   
-    
+
+
 }
 
 
@@ -164,28 +164,3 @@ body
 {
     height: 200px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

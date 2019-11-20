@@ -90,7 +90,7 @@ body{
 .contenedor-Contacto
 {
     width:100 vh;
-    background:url(../img/overlay.png),url(../img/2.jpg);
+    background:url('../img/overlay.png'),url('../img/2.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -1,81 +1,63 @@
 {% extends 'principal/base_template.html' %} {% load static %} {% block content %}
-<div class="container">
+<div class="contenedor-Contacto">
+  <div class="container">
+      <!--La clase, para el css.-->
+      <!--El id, para el JavaScript.-->
+      <form action="#" class="formulario" id="formulario" name="formulario" method="POST">
+          {% csrf_token %}
+          <div class="contenedor-inputs">
+              <div class="row py-5">
+                  <div class="col-md-12">
+                      <fieldset>
+                          <legend class="text-center text-danger">Contacto</legend>
 
-    <!--La clase, para el css.-->
-    <!--El id, para el JavaScript.-->
-    <form action="#" class="formulario" id="formulario" name="formulario" method="POST">
+                          <div class="form-group">
+                              <div class="col">
+                                    {{formulario.nombre}}
+                              </div>
+                              {{formulario.nombre.errors}}
+                          </div>
 
-        <div class="contenedor-inputs">
-            <div class="row ">
-                <div class="col-md-12">
-                    <fieldset>
-                        <legend class="text-center text-danger">Contacto</legend>
+                          <div class="form-group">
+                              <div class="col">
+                                  {{formulario.apellidos}}
+                              </div>
+                              {{formulario.apellidos.errors}}
+                          </div>
 
-                        <div class="form-group">
+                          <div class="form-group">
+                              <div class="col">
+                                  {{formulario.email}}
+                              </div>
+                              {{formulario.email.errors}}
+                          </div>
+
+                          <div class="form-group">
+                              <div class="col">
+                                  {{formulario.mensaje}}
+                              </div>
+                              {{formulario.mensaje.errors}}
+                          </div>
+
+                          <div class="form-group">
                             <div class="col">
-                                  {% csrf_token %}
-                                  {{formulario.as_p}}
-                                <input id="txtNombre" name="name" type="text" placeholder="Nombres" class="form-control">
+                                {{formulario.cbxContact}}
                             </div>
-                        </div>
+                            {{formulario.cbxContact.errors}}
+                          </div>
 
-                        <div class="form-group">
+                      </fieldset>
+                  </div>
+              </div>
 
-                            <div class="col">
-                                <input id="txtApellidos" name="name" type="text" placeholder="Apellidos" class="form-control estiloInput">
-                            </div>
-                        </div>
+          </div>
 
-                        <div class="form-group">
-
-                            <div class="col">
-                                <input id="txtEmail" name="email" type="text" placeholder="Correo" class="form-control estiloInput">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                            <div class="col">
-                                <textarea class="form-control" id="txtArea" name="message" placeholder="Ingresa tu mensaje aquí." rows="7"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-                            <select class="custom-select custom-select-lg mb-3" id="combobox">
-                                <option selected>Contacto por: Seleccione</option>
-                                <option value="1">Contacto por : Desarrollo Personal</option>
-                                <option value="2">Contacto por : Bienestar Personal</option>
-                                <option value="3">Contacto por : Clase Meditacion</option>
-                            </select>
-                        </div>
-
-                        <div class="terminos">
-                            <input type="checkbox" name="terminos" id="terminos">
-                            <label for="terminos" class="text-white">Acepto terminos y condiciones</label>
-                        </div>
-
-                        <ul class="error" id="error">
-                        </ul>
-
-                    </fieldset>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-12 text-center">
-                <input type="submit" class="btn" value="Enviar">
-            </div>
-        </div>
-    </form>
+          <div class="form-group">
+              <div class="col-md-12 text-center">
+                  <input type="submit" class="btn" value="Enviar">
+              </div>
+          </div>
+      </form>
+  </div>
 </div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-<script src="{% static 'js/validarContacto.js' %}"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 {% endblock %}
