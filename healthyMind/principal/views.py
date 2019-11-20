@@ -12,9 +12,7 @@ def articulos(request):
     return render(request, 'principal/Articulos/article1.html')
 
 
-#Vista para los Contactos
-def contacto(request):
-    return render(request, 'principal/contacto/contactoMind.html')
+
 
 # vista index
 def index (request):
