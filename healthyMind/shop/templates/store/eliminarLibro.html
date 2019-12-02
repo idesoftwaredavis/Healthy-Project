@@ -1,0 +1,25 @@
+{% extends 'principal/base_template.html' %}{% load static %}{% block content %}
+
+
+<div class="body-book">
+  <div class="container">
+    <div class="row">
+        <div class="col">
+
+            <div class="jumbotron jumbotron-fluid mt-4">
+                <h3 class="display-4 text-center">¿Seguro que quieres eliminar este Libro?</h3>
+                <section>
+                    <h3 class="text-center" hidden>Titulo seccion</h3>
+                    <article>
+                      <form method ="POST">
+                        {% csrf_token %}
+                        <h5 class="text-center" hidden>Titulo Article</h5>
+                        <button type="submit">Confirmar</button>
+                        <a href="{% url 'ebooks' %}">Cancelar</a>
+                      </form>
+
+                    </article>
+                </section>
+
+
+{% endblock %}

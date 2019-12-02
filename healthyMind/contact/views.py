@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 # Importar del fichero de formularios
 from .forms import form, formContact
+#importar modelo
+from .models import contact
 #Vista para los Contactos
 def contacto(request):
     #instanciar el formulario y guardarlo en una variable
@@ -20,6 +22,13 @@ def createContact(request):
         if form_contact.is_valid():
             #metodo save() que guarda los request.POST en el cual contiene todos los campos con informacion del Cliente para ser guardados.
             form_contact.save()
+            #modulo prueba
+            nombres = request.POST['nombres']
+            apellidos = request.POST['apellidos']
+            email = request.POST['email']
+            mensaje = request.POST['mensaje']
+            print(nombres + apellidos + email + mensaje)
+            #fin modulo prueba
             # indicar al usuario el exito/error de la operacion realizada.
             return redirect('index')
     else:
@@ -28,3 +37,10 @@ def createContact(request):
         print(form_contact)
         #Retorno el template contactoMind.html, indicandole con diccionario de contexto, el form.
     return render(request, 'contact/contactoMind.html', {'formulario': form_contact})
+
+# listar registro de contacto
+def readContact(request):
+    #obtengo orm de django para tener todos los campos como objetos del modelo
+    c = contact.objects.all()
+    # retorno el template y con diccionario de contexto, paso todos los objetos que seran llamados en el base_template
+    return render (request, 'contact/listarContacto.html', {'contacto': c})

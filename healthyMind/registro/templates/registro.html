@@ -1,0 +1,36 @@
+{% extends 'principal/base_template.html' %} {% load static %} {% block content %}
+<div class="contenedor-Contacto">
+  <div class="container">
+      <!--La clase, para el css.-->
+      <!--El id, para el JavaScript.-->
+      <form action="#" id="formulario" name="formulario" class="formulario" method="POST">
+        {% csrf_token %}
+          <div class="form-group">
+
+              <input type="email" id="txtEmail" name="email" class="form-control inputs" placeholder="Email">
+
+
+          </div>
+
+          <div class="form-group">
+
+              <input type="text" id="txtNombre" name="nombre" class="form-control inputs" placeholder="nombre">
+
+
+          </div>
+
+          <div class="form-group">
+              <label for="txtPassword" class="sr-only">Password</label>
+              <input class="inputs form-control p-2" type="password" id="txtPassword" name = "contra" placeholder="contra">
+          </div>
+
+          <div class="form-check form-group">
+
+              <button class="btn btn-lg btn-primary btn-block" id="btn" type="submit">Empezar! :D</button>
+          </div>
+
+      </form>
+
+  </div>
+</div>
+{% endblock %}

@@ -4,6 +4,5 @@ from . import views
 # Ingreso de todos los path correspondientes a la app 'main'
 
 urlpatterns=[
-    path('Contacto/', views.createContact, name = "contacto"),
-    path('listar/', views.readContact, name = "listarContacto")
+    path('Registro/', views.registrar, name = "registro"),
 ]

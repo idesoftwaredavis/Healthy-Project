@@ -1,0 +1,100 @@
+{% extends 'principal/base_template.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="body-book">
+  <div class="container">
+    <div class="row">
+        <div class="col">
+            {% for book in book %}
+            <div class="jumbotron jumbotron-fluid mt-4">
+                <h3 class="display-4 text-center">DETALLE E-BOOK</h3>
+                <section>
+                    <h3 class="text-center" hidden>Titulo seccion</h3>
+                    <article>
+
+                        <h5 class="text-center" hidden>Titulo Article</h5>
+                        <p class="lead  text-center">A continuacion tendras el listado del libro en cuestion : {{book.title}}</p>
+                        <p class="lead  text-center">No olvides que agregamos ofertas cada <strong> semana </strong></p>
+
+                    </article>
+                </section>
+
+
+<div class="dropdown show d-block mx-auto text-center">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Administrar Libro
+  </a>
+
+{% if user.is_superuser %}
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="{% url 'actualizar' book.id %}">Modificar Libro</a>
+
+  <a class="dropdown-item" href="{% url 'delete' book.id %}">Eliminar Libro</a>
+{% endif %}
+
+  </div>
+</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="py-4 border-bottom">
+                <h1 class="text-center">E-Books Mind</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-4">
+
+        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+
+            <div class="card">
+                <img class="card-img-top" src="{{book.image.url}}" alt="">
+                <div class="card-body">
+
+                    <h3 class="card-title">{{book.title}}</h3>
+                    <p class="card-text">{{book.short_description}}</p>
+                    <p class= "card-text">{{book.price}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid mt-4">
+
+                    <h3 class="display-4 text-center">DETALLE E-BOOK</h3>
+                    <section>
+                        <h3 class="text-center" hidden>Titulo seccion</h3>
+                        <article>
+                            <h5 class="text-center" hidden>Titulo Article</h5>
+
+                              <p class="lead  text-center">{{book.description}}</p>
+                              <hr>
+                              <p class="lead  text-center">Publicacion : {{book.published}}</p>
+                              <hr>
+                              <p class="lead  text-center">Precio : {{book.price}}</p>
+                              <hr>
+                              <p class="lead  text-center">Cantidad : {{book.quantity}}</p>
+                              <hr>
+                              <p class="lead  text-center">Autor : {{book.book_author}}  {{book.book_author.last_name}} </p>
+
+
+                        </article>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+  </div>
+</div>
+{% endblock %}

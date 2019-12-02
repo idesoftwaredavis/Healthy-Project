@@ -51,6 +51,23 @@
                                 <li class="navbar-item">
                                     <a href="{% url 'contacto' %}" class="header-items nav-link lead">Contacto</a>
                                 </li>
+                                {% if request.user.is_authenticated and  not user.is_superuser %}
+                                      <li><a href="/admin/logout/">Log Out</a></li>
+                                      {% else %}
+
+                                      <li class="navbar-item">
+                                          <a href="/admin/" class="header-items nav-link lead">Log-in</a>
+                                      </li>
+                                {% endif %}
+
+                                {% if not request.user.is_authenticated and not user.is_superuser %}
+                                <li class="navbar-item">
+                                    <a href="{% url 'registro' %}" class="header-items nav-link lead">Registrarse</a>
+                                </li>
+                                {% endif %}
+
+
+
                             </ul>
                         </div>
                     </div>

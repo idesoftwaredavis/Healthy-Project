@@ -38,8 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'principal',
-    'store',
-    'contact'
+    'contact',
+    'shop',
+    'registro'
 ]
 
 MIDDLEWARE = [
@@ -80,9 +81,9 @@ WSGI_APPLICATION = 'healthyMind.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'web',
-        'USER': 'userweb',
-        'PASSWORD': 'userweb',
+        'NAME': 'myweb',
+        'USER': 'useradmin',
+        'PASSWORD': 'useradmin',
         'HOST': 'localhost',
         'PORT': '5432'
     }
@@ -107,6 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    ('django.contrib.auth.backends.ModelBackend'),
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -129,5 +133,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS= (BASE_DIR, 'static/principal')
 
 # Media config
-MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

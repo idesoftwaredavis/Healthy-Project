@@ -3,8 +3,8 @@ from django.shortcuts import render
 
 
 # Vista para el Registro
-def registro(request):
-    return render (request, 'principal/Registro/registro.html')
+#def registro(request):
+#    return render (request, 'principal/Registro/registro.html')
 
 
 #Vista para los articulos

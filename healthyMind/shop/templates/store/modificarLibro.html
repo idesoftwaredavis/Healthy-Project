@@ -1,0 +1,43 @@
+{% extends 'principal/base_template.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="body-book">
+  <div class="container">
+    <div class="row">
+        <div class="col">
+
+            <div class="jumbotron jumbotron-fluid mt-4">
+
+                  <h3 class="display-4 text-center">MODULO REGISTRO LIBRO</h3>
+                  <form action="#" class="formulario" id="formulario" name="formulario" method="POST" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <div class="contenedor-inputs">
+                          <div class="row py-5">
+                              <div class="col-md-12">
+                                  <fieldset>
+                                      <div class="form-group">
+                                          <div class="col">
+
+                                                {{form}}
+                                          </div>
+
+                                      </div>
+                                  </fieldset>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <div class="col-md-12 text-center">
+                              <input type="submit" class="btn" value="Modificar">
+                          </div>
+                      </div>
+                  </form>
+  </div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
