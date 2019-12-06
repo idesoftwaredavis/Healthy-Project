@@ -52,7 +52,9 @@
         <div class="col-12">
             <div class="py-4 border-bottom">
                 <h1 class="text-center">E-Books Mind</h1>
+                {% if user.is_superuser %}
                 <a href="{% url 'create' %}">Crear libro</a>
+                {% endif %}
             </div>
         </div>
     </div>

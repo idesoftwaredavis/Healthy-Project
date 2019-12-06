@@ -51,12 +51,12 @@
                                 <li class="navbar-item">
                                     <a href="{% url 'contacto' %}" class="header-items nav-link lead">Contacto</a>
                                 </li>
-                                {% if request.user.is_authenticated and  not user.is_superuser %}
+                                {% if request.user.is_authenticated %}
                                       <li><a href="/admin/logout/">Log Out</a></li>
                                       {% else %}
 
                                       <li class="navbar-item">
-                                          <a href="/admin/" class="header-items nav-link lead">Log-in</a>
+                                          <a href="{% url 'login' %}" class="header-items nav-link lead">Log-in</a>
                                       </li>
                                 {% endif %}
 
